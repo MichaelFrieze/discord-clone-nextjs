@@ -1,3 +1,8 @@
+I am following this tutorial:
+[Fullstack Discord Clone: Next.js 13, React, Socket.io, Prisma, Tailwind, MySQL | Full Course 2023](https://www.youtube.com/watch?v=ZbX4Ok9YX94)
+
+---
+
 ## Key Features
 
 - Real-time messaging using Socket.io
