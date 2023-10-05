@@ -6,13 +6,33 @@ import { InitialModal } from '@/components/modals/initial-modal';
 
 const SetupPage = async () => {
   const profile = await initialProfile();
+  let publicInviteCode = 'c0d3de61-0826-4332-bde4-a0cb50bf5d10';
 
-  const server = await db.server.findFirst({
+  const existingServer = await db.server.findFirst({
     where: {
       members: {
         some: {
           profileId: profile.id,
         },
+      },
+    },
+  });
+
+  if (existingServer) {
+    return redirect(`/servers/${existingServer.id}`);
+  }
+
+  const server = await db.server.update({
+    where: {
+      inviteCode: publicInviteCode,
+    },
+    data: {
+      members: {
+        create: [
+          {
+            profileId: profile.id,
+          },
+        ],
       },
     },
   });
