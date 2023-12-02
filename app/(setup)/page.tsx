@@ -6,7 +6,7 @@ import { InitialModal } from '@/components/modals/initial-modal';
 
 const SetupPage = async () => {
   const profile = await initialProfile();
-  let publicInviteCode = 'bbd4af1f-11fb-45ba-abce-c490269731af';
+  let publicInviteCode = '6fe8b4de-dd3d-4a0e-85fe-b5ff801e4cd9';
 
   const existingServer = await db.server.findFirst({
     where: {
