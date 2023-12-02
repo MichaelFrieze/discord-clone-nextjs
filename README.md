@@ -1,7 +1,3 @@
-I am following [this tutorial.](https://youtu.be/ZbX4Ok9YX94?si=Jvs5vC7B1r4Yr78b)
-
----
-
 ## Key Features
 
 - Real-time messaging using Socket.io
